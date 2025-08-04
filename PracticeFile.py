@@ -395,46 +395,138 @@
 
 
 
-class Account: 
+# class Account: 
 
-  def __init__(self, Account_Holder, balance, accountNo, accountPasscode):
-    self.balance = balance
-    self.__accountNo = accountNo
-    self.__accountPasscode = accountPasscode
-    self.Account_Holder = Account_Holder
-
-  
-  def debitAmount(self, amount):
-    passcode = input("Enter Your Passcode: ")
-    if self.accountVerification(passcode):
-      if self.balance < amount: return "Insufficient Balance"
-      print("debiting...")
-      self.balance -= amount
-      print("Your Balance After Debit Is ", self.balance)
-    else:
-      return "Incorrect Password."
-  
-  def creditAmount(self, amount):
-    print("Crediting...")
-    self.balance += amount
-    print("Your Balance After Credit Is ", self.balance)
-
-  def accountVerification(self):
-    password = input("Enter your password:")
-    if password == self.__accountPasscode:
-      return True
-    else:
-      return False
-
-  def ViewAccountInfo(self):
-    if self.accountVerification():
-      print("Your Account Number is ", self.__accountNo, " and the password is ", self.__accountPasscode)
+#   def __init__(self, Account_Holder, balance, accountNo, accountPasscode):
+#     self.balance = balance
+#     self.__accountNo = accountNo
+#     self.__accountPasscode = accountPasscode
+#     self.Account_Holder = Account_Holder
 
   
+#   def debitAmount(self, amount):
+#     passcode = input("Enter Your Passcode: ")
+#     if self.__accountVerification(passcode):
+#       if self.balance < amount: return "Insufficient Balance"
+#       print("debiting...")
+#       self.balance -= amount
+#       print("Your Balance After Debit Is ", self.balance)
+#     else:
+#       return "Incorrect Password."
+  
+#   def creditAmount(self, amount):
+#     print("Crediting...")
+#     self.balance += amount
+#     print("Your Balance After Credit Is ", self.balance)
 
-FirstCustomer = Account("Jaiwant", 20000, 403, "devBarotLoveToCode@22")
+#   def __accountVerification(self):
+#     password = input("Enter your password:")
+#     if password == self.__accountPasscode:
+#       return True
+#     else:
+#       return False
+
+#   def viewInfo(self):
+#     self.__ViewAccountInfo()
+
+#   def __ViewAccountInfo(self):
+#     if self.__accountVerification():
+#       print("Your Account Number is ", self.__accountNo, " and the password is ", self.__accountPasscode)
+#     else:
+#       print("Incorrect Password")
+
+  
+
+# FirstCustomer = Account("Jaiwant", 20000, 403, "devBarotLoveToCode@22")
 
 # FirstCustomer.debitAmount(400)
 # FirstCustomer.creditAmount(6000)
+# FirstCustomer.viewInfo()
 
-FirstCustomer.ViewAccountInfo()
+# lst = [1, 3, 4, 6, 10, 42]
+# lst1 = [10, 20, 50, 40, 60, 20]
+
+# lst2 = []
+
+# idx = 0
+# for val in lst:
+#     # print(val)
+#     # print(lst[idx])
+#     lst2.insert(idx, val*lst1[idx])
+#     idx+=1
+
+# print(lst2)
+
+
+# class Complex:
+#   def __init__(self, real_number, img):
+#     self.real_number = real_number
+#     self.img = img
+
+#   def ShowNumber(self):
+#     print(self.real_number, "i +", self.img, "j")
+
+#   def __add__(self, num2):
+#     newReal = self.real_number + num2.real_number
+#     newImg = self.img + num2.img
+#     return Complex(newReal, newImg)
+
+# num1 = Complex(43, 50)
+# num1.ShowNumber()
+
+# num2 = Complex(23, 17)
+# num2.ShowNumber()
+
+# num3 = num1 - num2
+# num3.ShowNumber()
+
+
+# class Circle:
+
+#   def __init__(self, rad):
+#     self.rad = rad
+
+#   def Area(self):
+#     return (22/7)*self.rad**2
+  
+#   def perimeter(self):
+#     return 2*(22/7)*self.rad
+
+# circle = Circle(21)
+
+# print(circle.Area())
+# print(circle.perimeter())
+
+
+
+# class Employee:
+
+#   def __init__(self, role, department, salary):
+#     self.role = role
+#     self.department = department
+#     self.salary = salary
+
+#   def showdetails(self):
+#     print("You're an",self.role,"and you're assigned in", self.department, "department and your decided salary will be", self.salary, "₹/m")
+
+# class Engineer(Employee):
+#   def __init__(self, name, age):
+#     self.name = name
+#     self.age = age
+#     super().__init__("Engineer", "IT", "69,000")
+
+# jack = Engineer("Dev", "80")
+# jack.showdetails()
+
+# class Order: 
+#   def __init__(self, item, price):
+#     self.item = item
+#     self.price = price
+
+#   def __gt__(self, order2):
+#     return self.price > order2.price
+
+# order1 = Order("Chips", "Rs.20")
+# order2 = Order("tea", "Rs.50")
+
+# print(order1 > order2)
